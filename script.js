@@ -58,7 +58,7 @@ function displayProducts(products) {
             <div class="product-info" id="${product['product name'].replace(/\s+/g, '-').toLowerCase()}">
                 <h3>${product['product name']}</h3>
                 <p>${product['product description']}</p>
-                <p>Precio: $${parseFloat(product['price']).toFixed(2)}</p>
+                 <p>Precio: ${new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(product['price'])}</p>
                 <label>
                     Cantidad:
                     <input type="number" min="1" value="1" data-name="${product['product name']}" data-price="${product['price']}">
