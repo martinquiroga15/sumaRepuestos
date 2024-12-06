@@ -230,7 +230,7 @@ document.getElementById('send-order').addEventListener('click', () => {
 
     const message = `Nombre: ${name}\nNúmero de contacto: ${contactNumber}\nInformación adicional: ${additionalInfo}\n\nPedido:\n${cartMessage}`;
 
-    const whatsappURL = `https://wa.me/3416103054?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/3416154511?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
 });
 
