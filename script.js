@@ -225,7 +225,7 @@ document.getElementById('send-order').addEventListener('click', () => {
     const additionalInfo = additionalInfoInput.value.trim();
 
     const cartMessage = cart.map(item =>
-        `${item.name} - Cantidad: ${item.quantity} - Precio: $${(item.price * item.quantity).toFixed(2)}`
+        `${item.name} - Cantidad: ${item.quantity} - Precio: $${(item.price).toFixed(2)}`
     ).join('\n\n');
 
     const message = `Nombre: ${name}\nNúmero de contacto: ${contactNumber}\nInformación adicional: ${additionalInfo}\n\nPedido:\n${cartMessage}`;
