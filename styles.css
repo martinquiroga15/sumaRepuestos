@@ -1,3 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html {
+    overflow-x: hidden; 
+  }
+
+.link{
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
 
 body {
     margin: 0;
@@ -15,7 +30,7 @@ header {
     display: flex;
     align-items: center; 
     justify-content: center; 
-    background-color: #ffa41c; 
+    background-color: #ffa41c;
     color: white;
     width: 100%;
     padding: 15px 20px;
@@ -24,8 +39,8 @@ header {
 }
 
 header img {
-    max-height: 200%;
-    max-width: 200%; 
+    max-height: 100%;
+    max-width: 100%; 
     object-fit: contain; 
     margin: 10px;
 }
@@ -66,7 +81,7 @@ main{
 
 #category-list li:hover {
     background-color: #ffa41c; 
-    color: white; 
+    color: white;
     transform: scale(1.05);
 }
 
@@ -147,7 +162,7 @@ main{
 
 /* Cart styles */
 #cart {
-    background-color: #ffe6b3;
+    background-color: white;
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 20px;
@@ -207,9 +222,9 @@ button {
 }
 
 
-/* Estilos para el toast */
+
 .toast {
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50; 
     color: white;
     padding: 10px 20px;
     margin-bottom: 10px;
@@ -228,6 +243,16 @@ button {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        overflow-x: hidden; /* También desactiva el scroll horizontal a nivel raíz */
+      }
+
     #main-content {
         flex-direction: column;
     }
@@ -235,6 +260,7 @@ button {
     #category-bar {
         width: 100%;
         height: auto;
+        overflow-x: auto;
     }
     
     #product-list {
@@ -259,25 +285,23 @@ button {
         flex-direction: column;
     }
 }
-@media (max-width: 768px) {
-    #view-cart {
-        display: block; /* Visible en pantallas pequeñas */
-    }
-}
-
 
 @media (max-width: 768px) {
+
+    html {
+        overflow-x: hidden; 
+      }
     #category-bar {
         position: fixed; 
         top: 0;
         left: 0;
-        width: 100%; 
+        max-width: 100%; 
         height: auto; 
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start; 
-        background-color: #ffe6b3; 
+        background-color: #ffe6b3;
         z-index: 1000; 
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
         padding: 10px; 
@@ -308,3 +332,8 @@ button {
         margin-top: 60px;
     }
 }
+
+
+
+
+
